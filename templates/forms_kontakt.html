@@ -1,0 +1,21 @@
+{% extends "tamplates.html" %}
+{% block content %}
+{% for row in data %}
+<h3 >Wiadomości od czytelników</h3>
+<div style="float: left;">
+    <a href="{{url_for('logowanie_blueprint.Panel_admina')}}">
+      Wróć do Panelu administacyjnego
+    </a>
+    <div class="forms">
+        <span>Imię:  
+        {{row[0]}} </span>
+        <span>
+            E-mail: {{row[3]}}
+        </span>
+        <h3>{{row[1]}}</h3>
+        <p> {{row[2]}}</p>    
+    </div>
+
+  {% endfor %} 
+ <footer> Blog powstał dzięki Flasku i Pythona</footer>           
+{% endblock %}

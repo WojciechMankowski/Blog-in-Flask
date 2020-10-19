@@ -1,0 +1,15 @@
+{% extends 'tamplates.html' %} {% block content %} {% if data %} {% for wpis in
+data %}
+<div class="post">
+  <div class="Title">
+    <p>{{ wpis[0]|upper }}</p>
+  </div>
+  <div class="date">
+    <p>{{ wpis[2] }}</p>
+  </div>
+  <div class="text">
+    <p>{{ wpis[4]}}</p>
+  </div>
+</div>
+<footer> Blog powstał dzięki Flasku i Pythona</footer>
+{% endfor %} {% endif %} {% endblock %}

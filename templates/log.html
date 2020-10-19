@@ -1,0 +1,34 @@
+{% extends "tamplates.html" %} {% block title %}Zaloguj się{% endblock %} {%
+block content %}
+<div class="log_box">
+  <h2>Zaloguj się</h2>
+  <form method="POST">
+    {% if error %}
+    <p class="error"><strong>Error:</strong> {{ error }} {% endif %}</p>
+    <div class="input-group">
+      <span class="input-group-addon">Login</span>
+      <input type="text" class="form-control" name="username" id="username" />
+    </div>
+    <br />
+    <div class="input-group">
+      <span class="input-group-addon">Hasło</span>
+      <input
+        type="password"
+        class="form-control"
+        id="password"
+        name="password"
+      />
+    </div>
+    <br />
+    <button
+      class="btn waves-effect waves-light custom-green"
+      type="submit"
+      name="action"
+      value="login"
+    >
+      Zaloguj się
+    </button>
+  </form>
+</div>
+<footer>Blog powstał dzięki Flasku i Pythona</footer>
+{% endblock %}

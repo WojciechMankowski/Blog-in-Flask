@@ -1,0 +1,48 @@
+#admin{
+    margin-left: 20px;
+    margin-right: 25px;
+    width: auto;
+    height: auto;
+    
+}
+table{
+    table-layout: auto;
+}
+td {
+    width:450px;
+    height: 45px;
+} 
+.dodawanie_wpisu, .box_user, .forms{
+	width: 300px;
+	height: auto;
+	margin-left: auto;
+	margin-right: auto; 
+	text-align: center;
+	font-size: 25px; 
+	margin-top: 45px;
+} 
+input{
+	width: 100%;
+	height: 25px;
+	border: none;
+	border-bottom: 2px solid lightgrey;
+	margin-bottom: 25px;
+}
+
+button{
+	width: 110px;
+	height: auto;
+	border: 2px solid #0099ff;
+	border-radius: 3px;
+	background-color: transparent;
+	font-size: 20px;
+	padding: 5px;
+} 
+.error{
+	color: red;
+	font-size: 18px;
+}
+#wiadomosc{
+	height: 150px;
+} 
+

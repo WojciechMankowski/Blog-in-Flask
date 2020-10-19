@@ -1,0 +1,52 @@
+{% extends 'tamplates.html' %} {% block content %}
+<div id="admin">
+  <table>
+    <tr> <td>
+        <a href="{{url_for('logowanie_blueprint.Add_post')}}">
+          Dodawanie nowych postów.</a></td>
+      <td>W tej opcji można dodawać nowych postów</td>
+    </tr>
+    <td>
+        <a href="{{url_for('logowanie_blueprint.Add_users')}}">
+          Dodawanie nowych kont</a>
+ </td>
+      <td>W tej opcji można dodawać nowych autorów wpsów</td>
+    </tr>
+    <tr>
+      <td> <a href="{{url_for('logowanie_blueprint.Forms_kontatkt')}}">
+Formularz kontaktowy
+      </a>
+        </td>
+      <td>Możliwość sprawdzenia czy pojawiły się nowe wiadomości od cztelników bloga.</td>
+    </tr>
+    <tr>
+      <td>Komentarze</td>
+      <td style="color: red;">Administrator pracuje nad taką możliwością</td>
+      <!-- <td>Możliwość usuwanie komentarzy, blokowania użytkoików oraz odpowianadanie na komentarza. </td> -->
+    </tr> 
+    <tr>
+      <td>Jaki wpis chcerz usunąć?</td>
+      <td>
+        <select name="dalet_title">
+          {% for row in data %}
+            <option>
+                {{row[0]}}
+            </option>
+        
+    </select>
+    <button value="Usuń">Usuń</button>
+  </form></td>
+    </tr>
+    <tr>
+      <td> 
+        <a href="{{url_for('logout')}}">
+        Wyloguj się</a></td>
+
+    </tr>
+  </table> </div>
+  {% endfor %} 
+  <footer> Blog powstał dzięki Flasku i Pythona</footer>
+  {% endblock %} 
+ 
+
+  

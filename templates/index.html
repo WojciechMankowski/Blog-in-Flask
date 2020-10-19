@@ -1,0 +1,26 @@
+{% extends 'tamplates.html' %} 
+{% block content %} 
+<p id="nagłówek"> Najnowże wpisy</p>
+{% if data %} 
+{% for wpis in data %}
+<div class="articals">
+  <div class="img">
+    <img src="{{wpis[5]}}" alt="{{ wpis[0]}}  " />
+  </div>
+  <div id="title">
+    <h3>
+      <a href="wpis/{{wpis[0][:5]}}">{{ wpis[0]|upper }}</a>
+    </h3>
+  </div>
+  <div class="info">
+    <span>{{wpis[1]}} | {{wpis[2]}}</span>
+  </div>
+  <div>
+    <span class="zajawka"> {{wpis[3][:200]+ "..."}} </span>
+  </div>
+</div>  
+{% endfor %}
+{% endif %}
+
+<footer> Blog powstał dzięki Flasku i Pythona</footer>
+{% endblock %}

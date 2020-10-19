@@ -1,0 +1,23 @@
+{% extends 'tamplates.html' %} {% block content %}
+
+<div id="form_box">
+  <form method="post" action="{{url_for('podstronny_blueprint.Kontakt')}}">
+    <label> Twoje imię: <input type="text" name="Imię" id="name" /></label
+    ><br />
+    <label>E-mail: <input type="email" name="E-mail" id="email" /></label>
+    <br />
+    <label
+      >Tytuł wiadomości: <input type="text" name="Tytuł" id="submit" /></label
+    ><br />
+    <label
+      >Wiadomości: <input type="text" name="Wiadomość" id="wiadomosc"
+    /></label>
+    <br />
+    <input type="submit" value="Wyślij" id="wyslij" />
+    {% if feedback %}
+    <p class="error">{{ feedback }}</p>
+    {% endif %}
+  </form>
+</div>
+<footer>Blog powstał dzięki Flasku i Pythona</footer>
+{% endblock %}

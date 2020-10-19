@@ -1,0 +1,41 @@
+#nagłówek
+{
+	text-align: center;
+    font-size: 29px;
+    font-weight: bold;
+}
+#title {
+	width: 50%;
+	height: 40px;
+	background-color: #0099ff;
+	text-align: center;
+	margin-left: 25px;
+    margin-bottom: 15px;
+    margin-top: 10px;
+} 
+#title h3 {
+    padding-top: 5px;
+}
+.info{
+	width: 100%;
+	height: 20px;
+	margin-bottom: 15px;
+}
+.zajawka{
+	height: 120px;
+	width: 80%;
+}
+#tytul{
+	text-align: center;
+	font-size: 28px;
+}
+.img{
+	width: 50%;
+	height: 220px;
+}
+.img img {
+	width: 450px;
+	height: 200px;
+	border: 2px #0099ff solid;
+	border-radius: 3px;
+}

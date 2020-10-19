@@ -1,0 +1,48 @@
+
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog programisty</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='forms.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='post.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='admin.css') }}" />
+  </head>
+
+  <body>
+    <div id="logo">
+      <p>Blog programisty</p>
+    </div>
+    <nav id="menu">
+      <ul id="Items">
+        <li class="list_item">
+          <a href="{{url_for('Home')}}">Home</a>
+        </li>
+        <li class="list_item">
+          <a href="{{url_for('podstronny_blueprint.About')}}">O mnie</a>
+        </li>
+        <li class="list_item">
+          <a href="{{url_for('podstronny_blueprint.Kontakt')}}">Kontakt</a>
+        </li>
+        <li class="list_item">
+          <a href="{{url_for('log_blueprint.login')}}">Zaloguj się</a>
+        </li>
+        
+        
+       
+      </ul>
+    </nav>
+    <div style="clear: both;"> </div>
+      {% block content %} 
+    
+    
+    {% endblock %}
+   
+
+    
+    
+  </body>
+</html>
+

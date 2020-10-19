@@ -1,0 +1,40 @@
+{% extends 'tamplates.html' %} 
+{% block content %} 
+{% for row in data %}
+  <h3> Zostałeść zalogowany jako  {{row[3]}}. </h3> 
+  {% endfor %} 
+  <div >
+    <a href="{{url_for('logowanie_blueprint.Panel_admina')}}">
+      Wróć do Panelu administacyjnego
+    </a>
+<div class="dodawanie_wpisu">
+  <form method="POST" action="{{url_for('logowanie_blueprint.Add_post')}}">
+    <label for="Tytuł">
+      Tytuł artykuła:
+      <input type="text" name="Tytuł" id="tytul" /> <br>
+    </label>
+    <label for="Autor">
+      Autor
+      <input type="text" name="Autor" id="autor" /><br>
+    </label>
+    <label for="Data">
+      Data publikacji:
+      <input type="date" name="Data" id="data" /><br>
+    </label>
+    <label for="Zajawka">
+      Zajawka wpisu:
+      <input type="text" name="Zajawka" id="zajawka" /><br>
+    </label>
+    <label for="Treść">
+      Treść wpisu:
+      <input type="text" name="Treść" id="Treść" /><br>
+    </label>
+    <label for="IMG">
+      Zdjęcie:
+      <input type="text" name="IMG" id="IMG" /><br>
+    </label>
+    <input type="submit" value="Dodaj wpis" id="dodaj"/> <br>
+  </form>
+</div>
+<footer> Blog powstał dzięki Flasku i Pythona</footer>
+{% endblock %}

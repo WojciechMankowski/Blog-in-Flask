@@ -1,0 +1,41 @@
+{% extends "tamplates.html" %} {% block title %}Zaloguj się{% endblock %} {%
+block content %}
+<h3 style="float: left;">Dodaj nowego użytkownika</h3>
+<div style="float: left;">
+    <a href="{{url_for('logowanie_blueprint.Panel_admina')}}">
+      Wróć do Panelu administacyjnego
+    </a>
+</div>
+  <div class="box_user" style="clear: both;">
+    <form method="POST" class="top-margin">
+      {% if success_register %}
+      <p class="success">
+        <strong>Success:</strong> {{ success_register }} {% endif %} {% if
+        error_register %}
+      </p>
+      <p class="error">
+        <strong>Error:</strong> {{ error_register }} {% endif %}
+      </p>
+      <div class="input-group">
+        <label>Imię
+        <input type="text" class="input_name" name="name" id="name" />
+        </label>
+        <label>   Login
+        <input type="text" class="input_login" name="user" id="user" /> </label>
+      <br />
+      <label>
+        Hasło
+        <input type="text" class="input_haslo" id="pass" name="pass" /> </label>
+      <br />
+      <button
+        class="btn waves-effect waves-light custom-green"
+        type="submit"
+        name="action"
+        value="register">
+        Dodaj
+      </button>
+    </form>
+    </div>
+  </div>
+  <footer> Blog powstał dzięki Flasku i Pythona</footer>
+{% endblock %}
